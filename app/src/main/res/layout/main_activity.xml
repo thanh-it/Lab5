@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:tint="@android:color/white"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:contentInsetStartWithNavigation="0dp"
+            app:contentInsetStart="0dp"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginRight="10dp"
+                      android:layout_marginLeft="10dp"
+        android:orientation="horizontal">
+            <ImageView android:layout_width="25dp"
+                       android:layout_height="40dp"
+android:layout_gravity="center"
+            android:src="@drawable/btnback"/>
+            <ImageView android:layout_width="25dp" android:layout_height="45dp"
+                       android:layout_marginLeft="-7dp"
+                       android:layout_marginTop="5dp"
+                       android:src="@drawable/online"/>
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_weight="1"
+                          android:layout_height="wrap_content"
+            android:orientation="vertical">
+                <TextView android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="Huy Nguyen"
+                          android:textColor="#fff"
+                          android:textSize="20sp"
+                />
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Last active: 10 sec ago"
+                android:textColor="#C2C2C2"/>
+            </LinearLayout>
+            <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                       android:layout_gravity="center"
+            android:src="@drawable/webcam"/>
+            <ImageView android:layout_width="30dp" android:layout_height="30dp"
+                       android:layout_gravity="center"
+                       android:layout_marginLeft="10dp"
+                       android:src="@drawable/callphone"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/swipe"
+            android:layout_below="@id/toolbar"
+            >
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@drawable/bg">
+        <androidx.recyclerview.widget.RecyclerView android:layout_width="match_parent"
+                                                   android:id="@+id/list_item"
+                                                   android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    <LinearLayout android:layout_width="match_parent"
+                  android:padding="5dp"
+                  android:background="#fff"
+                  android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:layout_alignParentBottom="true">
+        <Button android:layout_width="35dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/camera"/>
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Say something..."
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="#fff"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"/>
+        <Button android:layout_width="40dp" android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/btnsend"/>
+    </LinearLayout>
+</RelativeLayout>

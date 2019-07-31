@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/btnVideoCall"
+            android:icon="@drawable/webcam"
+            android:title="Video Call"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/btnCall"
+            android:icon="@drawable/callphone"
+            android:title="Call"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:iconTint="@color/colorWhite"
+            android:id="@+id/action_settings"
+            android:title="Settings"
+            app:showAsAction="never"/>
+</menu>
